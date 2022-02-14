@@ -66,3 +66,18 @@ input[value="-"]{
     color: #f9f9f9;
     background: #F44336;
 }
+/* 2倍ボタン */
+input[value="double"]{
+    color: #f9f9f9;
+    background: #ff69b4;
+}
+/* 二分の一ボタン */
+input[value="half"]{
+    color: #f9f9f9;
+    background: #ffd700;
+}
+/* クリアボタン */
+input[value="clear"]{
+    color: #f9f9f9;
+    background: #32cd32;
+}

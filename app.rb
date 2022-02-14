@@ -8,3 +8,47 @@ before do
     Count.create(number: 0)
   end
 end
+
+get '/' do
+  @number = Count.first.number
+  erb :index
+end
+
+post '/plus' do
+  count = Count.first
+  count.number = count.number + 1
+  count.save
+  redirect '/'
+end
+post '/minus' do
+  count = Count.first
+  count.number = count.number - 1
+  count.save
+  redirect '/'
+end
+
+#クリアボタン
+post '/clear' do
+  count = Count.first
+  count.number = count.number = 0
+  count.save
+  redirect '/'
+end
+
+#*２ボタン
+post '/double' do
+  count = Count.first
+  count.number = count.number * 2
+  count.save
+  redirect '/'
+end
+
+#/２ボタン
+post '/half' do
+  count = Count.first
+  count.number = count.number / 2
+  count.save
+  redirect '/'
+end
+
+#2個目のカウンター
